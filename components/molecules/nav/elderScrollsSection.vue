@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h2>Elder scrolls: call to arms</h2>
+    <atoms-nav-heading-level2>Elder scrolls: call to arms</atoms-nav-heading-level2>
 
     <ul>
       <li>
-        <h3>Bleak falls barrow</h3>
+        <atoms-nav-heading-level3>Bleak falls barrow</atoms-nav-heading-level3>
         <ul>
           <li>
             <nuxt-link :to="routeNames.dragonbord">

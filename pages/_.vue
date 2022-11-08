@@ -1,10 +1,5 @@
 <template>
   <article class="container mx-auto">
-    <template v-if="isDev">
-      <pre>Page: {{ article }}</pre>
-      <pre>Params: {{ params }}</pre>
-    </template>
-
     <h1>{{ article.title }}</h1>
     <nuxt-content :document="article" />
   </article>
@@ -27,12 +22,6 @@ export default Vue.extend({
     return {
       article,
       params
-    }
-  },
-
-  computed: {
-    isDev() {
-      return process.env.NODE_ENV === 'development';
     }
   }
 })

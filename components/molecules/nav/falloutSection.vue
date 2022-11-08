@@ -1,9 +1,10 @@
 <template>
   <section>
-    <h2>Fallout Wasteland Warfare</h2>
+    <atoms-nav-heading-level2>Fallout wasteland warfare</atoms-nav-heading-level2>
+
     <ul>
       <li>
-        <h3>Wasteland creatures</h3>
+        <atoms-nav-heading-level3>Wasteland creatures</atoms-nav-heading-level3>
         <ul>
           <li>
             <nuxt-link :to="routeNames.mirelurkQueen">

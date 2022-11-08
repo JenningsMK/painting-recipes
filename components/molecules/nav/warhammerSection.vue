@@ -1,9 +1,10 @@
 <template>
   <section>
-    <h2>Warhammer 40,000</h2>
+    <atoms-nav-heading-level2>Warhammer 40,000</atoms-nav-heading-level2>
+
     <ul>
       <li>
-        <h3>Black Templars</h3>
+        <atoms-nav-heading-level3>Black Templars</atoms-nav-heading-level3>
         <ul>
           <li>
             <nuxt-link :to="routeNames.emperorsChampions">
