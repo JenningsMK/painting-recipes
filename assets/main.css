@@ -1,0 +1,15 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply font-nunito text-base;
+    font-feature-settings: "ss01", "liga" 0;
+  }
+
+  h1, h2 {
+    @apply font-sig;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
