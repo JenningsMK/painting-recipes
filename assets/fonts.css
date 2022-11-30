@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url("@/assets/fonts/nunito.ttf") format("truetype"),
+  url("@/assets/fonts/nunito.woff2") format("woff2");
+  font-variation-settings: "wght" 400;
+  font-display: optional;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Signika Negative';
+  src: url("@/assets/fonts/signikaNegative.ttf") format("truetype"),
+  url("@/assets/fonts/signikaNegative.woff2") format('woff2');
+  font-variation-settings: "wght" 400;
+  font-display: optional;
+  font-weight: 400;
+}
