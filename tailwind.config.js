@@ -24,6 +24,9 @@ module.exports = {
         nunito: ['Nunito', ...defaultTheme.fontFamily.serif],
         sig: ['Signika Negative', ...defaultTheme.fontFamily.serif],
       },
+      fontSize: {
+        '4x1': ['2.5rem', '1.5'],
+      },
     },
   },
   plugins: [],
