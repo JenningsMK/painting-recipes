@@ -8,17 +8,27 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint **/*"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "eslint **/*"
+    ]
   },
   "dependencies": {
     "astro": "^4.0.7"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^13.24.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "typescript": "^5.3.3"
   }
 }
