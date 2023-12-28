@@ -1,0 +1,45 @@
+:root {
+  /* Fonts */
+  --sig: Signika Negative, Segoe UI, sans-serif;
+  --nun: Nunito, Arial, sans-serif;
+
+  --page-title-font: var(--sig);
+  --section-title-font: var(--sig);
+  --body-font: var(--nun);
+  --nav-heading-font: var(--nun);
+  --list-font: var(--nun);
+
+  --page-title-size: 2.5rem;
+  --section-title-size: 1rem;
+  --body-font-size: 1rem;
+  --nav-heading-font-size: 1rem;
+  --list-font-size: 1rem;
+
+  @media (min-width: 67.5rem) {
+    --page-title-size: 2.8125rem;
+    --section-title-size: 2.5rem;
+    --body-font-size: 1.125rem;
+    --nav-heading-font-size: 1.125rem;
+  }
+
+  /* Colours */
+  --light-100: rgba(248, 250, 252, 1);
+  --primary-100: rgba(96, 28, 128, 1);
+
+  @media (prefers-color-scheme: dark) {
+    --primary-100: rgba(46, 9, 63, 1);
+  }
+
+  /* Effects */
+
+  /* Overlays */
+}
+
+body {
+  color: var(--light-100);
+  font: 400 var(--body-font-size) var(--body-font);
+}
+
+h1 {
+  font: 600 var(--page-title-size) var(--page-title-font);
+}
