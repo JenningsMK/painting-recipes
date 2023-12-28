@@ -1,0 +1,36 @@
+.navigation {
+  text-align: center;
+}
+
+.navigation__title {
+  background: transparent url('../images/navigation-background.svg') center / 100% no-repeat;
+  color: var(--light-100);
+  font-size: var(--nav-heading-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.navigation__title-text {
+  background: var(--primary-100);
+  padding: 0 1rem;
+}
+
+.navigation__section {
+  margin-bottom: 1.2rem;
+  padding-left: 0;
+}
+
+.navigation__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  color: currentColor;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.navigation__item:is(:hover, :focus) {
+  border-bottom: 1px solid var(--light-100);
+}
