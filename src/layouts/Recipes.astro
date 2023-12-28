@@ -1,0 +1,40 @@
+---
+import '../styles/main.css';
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+  title: string
+  description: string,
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} | Painting Recipes</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional">
+  </head>
+
+  <body>
+    <Navigation />
+
+    <main>
+      <slot />
+    </main>
+
+    <div class="colour-block"><!-- This is just a div used to colour in part of the page on dark mode --></div>
+  </body>
+</html>
