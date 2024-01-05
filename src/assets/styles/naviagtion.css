@@ -1,10 +1,11 @@
 .navigation {
+  background: var(--primary-100);
+  color: var(--light-100);
   text-align: center;
 }
 
 .navigation__title {
   background: transparent url('../images/navigation-background.svg') center / 100% no-repeat;
-  color: var(--light-100);
   font-size: var(--nav-heading-font-size);
   margin-bottom: 0.5rem;
 }
@@ -33,4 +34,8 @@
 
 .navigation__item:is(:hover, :focus) {
   border-bottom: 1px solid var(--light-100);
+}
+
+.navigation__item[aria-describedby] {
+  background: url('/src/assets/images/paint-brush.svg') no-repeat center left;
 }

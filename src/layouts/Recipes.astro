@@ -1,13 +1,14 @@
 ---
-import '../styles/main.css';
+import '../assets/styles/main.css';
+import '../assets/styles/recipes.css';
 import Navigation from "../components/Navigation.astro";
 
 interface Props {
   title: string
-  description: string,
+  description: string
 }
 
-const { title, description } = Astro.props;
+const { title, description, currentPageID } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,6 +16,9 @@ const { title, description } = Astro.props;
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" crossorigin>
 
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -26,6 +30,8 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   </head>
 
   <body>

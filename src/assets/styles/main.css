@@ -25,18 +25,21 @@
   /* Colours */
   --light-100: rgba(248, 250, 252, 1);
   --primary-100: rgba(96, 28, 128, 1);
+  --dark-100: rgba(30, 41, 59, 1);
 
   @media (prefers-color-scheme: dark) {
     --primary-100: rgba(46, 9, 63, 1);
   }
 
   /* Effects */
+  --blur-effect: 3px;
 
   /* Overlays */
+  --overlay: rgba(30, 32, 36, 0.4);
 }
 
 body {
-  color: var(--light-100);
+  color: var(--dark-100);
   font: 400 var(--body-font-size) var(--body-font);
 }
 

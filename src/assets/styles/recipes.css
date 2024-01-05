@@ -1,0 +1,30 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+.overlay {
+  background: var(--overlay);
+  backdrop-filter: blur(var(--blur-effect));
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.navigation {
+  height: 100vh;
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 80vw;
+}
+
+.navigation__section {
+  margin-inline: auto;
+  width: 80%;
+}
+
+.navigation__section:first-of-type {
+  margin-top: 7rem;
+}

@@ -1,5 +1,11 @@
 ---
 import '../assets/styles/naviagtion.css';
+
+import { getCollection } from 'astro:content';
+import Link from './Link.astro';
+
+const { currentPageID } = Astro.props;
+const warhammerRecipes = await getCollection('40K');
 ---
 
 <div class="overlay"><!-- This is just for an overlay effect --></div>
@@ -52,12 +58,17 @@ import '../assets/styles/naviagtion.css';
     </h2>
 
     <ul class="navigation__items">
-      <li>
-        <a href="/40K/emperors-champion" class="navigation__item">Emperors Champion</a>
-      </li>
-      <li>
-        <a href="/40K/voidraven-bomer" class="navigation__item">Voidraven Bomber</a>
-      </li>
+      {
+        warhammerRecipes.map((recipe) => (
+          <Link href={recipe.slug} content={recipe.data.title} />
+        ))
+      }
     </ul>
   </section>
 </nav>
+
+<script>
+  const currentURL = window.location.pathname;
+  const linkTag = document.querySelector(`[href="${currentURL}"]`);
+  linkTag?.setAttribute('aria-describedby', 'current');
+</script>
