@@ -57,7 +57,7 @@ const warhammerRecipes = await getCollection('40K');
       <span class="navigation__title-text">Warhammer 40,000</span>
     </h2>
 
-    <ul class="navigation__items">
+    <ul class="navigation__items" data-testing="40K">
       {
         warhammerRecipes.map((recipe) => (
           <Link href={recipe.slug} content={recipe.data.title} />
