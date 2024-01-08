@@ -9,12 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky install",
-    "lint": "eslint **/*"
+    "lint": "eslint src/**/*"
   },
   "lint-staged": {
     "**/*": [
       "prettier --write --ignore-unknown",
-      "eslint **/*"
+      "pnpm run lint"
     ]
   },
   "dependencies": {
