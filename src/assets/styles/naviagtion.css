@@ -33,9 +33,9 @@
 }
 
 .navigation__item:is(:hover, :focus) {
-  border-bottom: 1px solid var(--light-100);
+  text-decoration: underline;
 }
 
 .navigation__item[aria-describedby] {
-  background: url('/src/assets/images/paint-brush.svg') no-repeat center left;
+  background: url('/src/assets/images/paint-brush.svg') no-repeat 25px center / auto 1rem;
 }

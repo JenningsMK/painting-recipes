@@ -60,7 +60,7 @@ const warhammerRecipes = await getCollection('40K');
     <ul class="navigation__items" data-testing="40K">
       {
         warhammerRecipes.map((recipe) => (
-          <Link href={recipe.slug} content={recipe.data.title} />
+          <Link href={`/${recipe.collection}/${recipe.slug}`} content={recipe.data.title} />
         ))
       }
     </ul>

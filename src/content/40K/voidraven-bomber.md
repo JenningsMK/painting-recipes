@@ -1,5 +1,5 @@
 ---
-title: 'Voidraven bomber'
+title: 'Voidraven Bomber'
 description: 'Painting a dark eldar boomer'
 ---
 

@@ -4,7 +4,8 @@ describe('That the navigation is rendering the correct information', () => {
       cy.visit('/');
 
       cy.get('[data-testing="40K"] li').should('have.length', 2);
-      cy.contains('Emperors Champion').should('have.attr', 'href', '/40K/emperors-champion');
+      // eslint-disable-next-line
+      cy.contains("Emperor's Champion").should('have.attr', 'href', '/40K/emperors-champion');
       cy.contains('Voidraven Bomber').should('have.attr', 'href', '/40K/voidraven-bomber');
     });
   });

@@ -32,6 +32,8 @@ const { title, description, currentPageID } = Astro.props;
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional">
 
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <script src="../assets/scripts/menu-button.ts"></script>
   </head>
 
   <body>
@@ -40,6 +42,10 @@ const { title, description, currentPageID } = Astro.props;
     <main>
       <slot />
     </main>
+
+    <button class="menu-button" id="menu-button" type="button" data-state="closed">
+      <span class="sr-only">open menu</span>
+    </button>
 
     <div class="colour-block"><!-- This is just a div used to colour in part of the page on dark mode --></div>
   </body>
