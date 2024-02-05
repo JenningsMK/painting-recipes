@@ -45,6 +45,9 @@
 
   /* Overlays */
   --overlay: rgba(30, 32, 36, 0.4);
+
+  /* Effects */
+  --border-radius: 15px;
 }
 
 body {
@@ -54,6 +57,11 @@ body {
 
 h1 {
   font: 600 var(--page-title-size) var(--page-title-font);
+}
+
+h2 {
+  font: 400 var(--body-font-size) var(--body-font);
+  margin: 0;
 }
 
 .sr-only {

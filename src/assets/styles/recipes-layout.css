@@ -1,0 +1,43 @@
+main {
+  line-height: 1.4;
+  padding: 4.75rem 1.5rem 0;
+}
+
+h1 {
+  margin: 0 0 2.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+h2:first-of-type {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2:not(:first-of-type) {
+  border-bottom: 1px solid var(--dark-100);
+  font-weight: bold;
+  height: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-shadow:
+    -1px 0 var(--light-100),
+    0 1px var(--light-100),
+    1px 0 var(--light-100),
+    0 -1px var(--light-100);
+  width: 100%;
+}
+
+p {
+  margin: 0 0 2.5rem;
+}
+
+img {
+  border-radius: var(--border-radius);
+  display: block;
+  margin-inline: auto;
+}
+
+ol {
+  padding-left: 1rem;
+  margin: 0 0 1rem;
+}

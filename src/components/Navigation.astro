@@ -4,12 +4,12 @@ import '../assets/styles/naviagtion.css';
 import { getCollection } from 'astro:content';
 import Link from './Link.astro';
 
-const { currentPageID } = Astro.props;
 const warhammerRecipes = await getCollection('40K');
+const { inert, ariaHidden } = Astro.props
 ---
 
 <div class="overlay"><!-- This is just for an overlay effect --></div>
-<nav class="navigation">
+<nav class="navigation" {inert} aria-hidden={ariaHidden}>
   <section class="navigation__section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>

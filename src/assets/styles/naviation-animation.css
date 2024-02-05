@@ -25,6 +25,7 @@
 .overlay {
   background: var(--overlay);
   backdrop-filter: blur(var(--blur-effect));
+  display: none;
   height: 100vh;
   left: 0;
   top: 0;
@@ -62,7 +63,7 @@
 }
 
 .menu-button {
-  /* TODO Have a look at change the svg as the animation is playing */
+  /* TODO Have a look at changing the svg as the animation is playing, try and make the lines white as the animation is playing */
   background:
     url('../images/hamburger.svg') no-repeat center / auto,
     radial-gradient(circle at center, rgba(96, 28, 128, 1) var(--light-gradient), rgba(255, 255, 255, 1) 0);
@@ -86,6 +87,7 @@
   .overlay--appear {
     animation: 0.5s ease-in-out 1 normal overlay;
     animation-fill-mode: forwards;
+    display: block;
   }
 
   .navigation {
@@ -100,7 +102,3 @@
     animation: 0.75s ease-in-out 1 normal gradient-grow;
   }
 }
-
-/*
-  TODO Maybe rename this file as this is all for the navigation at the moment
- */
