@@ -1,8 +1,8 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import '../assets/styles/main.css';
 import '../assets/styles/naviation-animation.css';
 import '../assets/styles/recipes-layout.css';
-import Navigation from "../components/Navigation.astro";
 
 interface Props {
   title: string
@@ -27,8 +27,8 @@ const { title, description } = Astro.props;
 
   <title>{title} | Painting Recipes</title>
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" as="style" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional" />
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
   <script src="../assets/scripts/menu-button.ts"></script>
 </head>
@@ -45,5 +45,30 @@ const { title, description } = Astro.props;
     </button>
 
     <div class="colour-block"><!-- This is just a div used to colour in part of the page on dark mode --></div>
+
+  <script>
+    /*
+     * TODO (Mark) - Come back and clean this up
+     * - Add more documentation to the function and variables
+     * - The classes need to have better names to match with the tags and roles
+     * - Remove the `console.count()` if we don't need it any more
+     * - Think out putting in some performance tracking
+     */
+    const toggleNavigationClass = (passed: boolean) => {
+      const nav = document.querySelector('nav');
+      passed ? nav.classList.add('slide-from-top') : nav.classList.remove('slide-from-top');
+      console.count('resizer event fired')
+    };
+
+    const query = window.matchMedia('(min-width: 67.5rem)');
+    /**
+     * Add a resizer observer to add and remove a class to the nav tag to make styling the navigation easier
+     */
+    query.addEventListener('change', (event) => {
+      toggleNavigationClass(event.matches);
+    });
+
+    toggleNavigationClass(query.matches);
+  </script>
   </body>
 </html>

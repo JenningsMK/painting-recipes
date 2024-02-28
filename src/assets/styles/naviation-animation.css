@@ -35,6 +35,7 @@
 }
 
 .navigation {
+  padding-top: 7rem;
   height: 100vh;
   right: -80vw;
   top: 0;
@@ -49,10 +50,6 @@
 .navigation__section {
   margin-inline: auto;
   width: 80%;
-}
-
-.navigation__section:first-of-type {
-  margin-top: 7rem;
 }
 
 .navigation__item {
@@ -81,6 +78,27 @@
 .menu-button:is(:hover, :focus-visible) {
   outline: none;
   transform: scale(1.2);
+}
+
+@media screen and (min-width: 67.5rem) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 11.17rem 2rem;
+    height: unset;
+    /*overflow: hidden;*/
+    right: unset;
+    top: unset;
+    position: unset;
+    width: unset;
+  }
+
+  .navigation__section {
+    flex-basis: 25%;
+    margin-bottom: auto;
+    margin-inline: unset;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -9,12 +9,12 @@ h1 {
   text-align: center;
 }
 
-h2:first-of-type {
+main h2:first-of-type {
   font-size: 2rem;
   text-align: center;
 }
 
-h2:not(:first-of-type) {
+main h2:not(:first-of-type) {
   border-bottom: 1px solid var(--dark-100);
   font-weight: bold;
   height: 1.1rem;
@@ -27,17 +27,27 @@ h2:not(:first-of-type) {
   width: 100%;
 }
 
-p {
+main p {
   margin: 0 0 2.5rem;
 }
 
-img {
+main img {
   border-radius: var(--border-radius);
   display: block;
   margin-inline: auto;
 }
 
-ol {
+main ol {
   padding-left: 1rem;
   margin: 0 0 1rem;
+}
+
+@media screen and (min-width: 67.5rem) {
+  main {
+    padding: 0 11.17rem;
+  }
+
+  h1 {
+    text-align: unset;
+  }
 }
