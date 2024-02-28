@@ -1,6 +1,8 @@
 ---
-import Home from '../layouts/Splash.astro';
-import Navigation from '../components/Navigation.astro';
+import Home from '../layouts/Index.astro';
+import { getCollection } from 'astro:content';
+
+const warhammerRecipes = await getCollection('40K');
 ---
 
 <Home>
@@ -11,11 +13,24 @@ import Navigation from '../components/Navigation.astro';
 	<main>
 		<p class="blurb">
 			I have started to write down some of the painting recipes that I have been using over the year’s while
-			painting some of my miniatures. I don’t go into any great detail as these are just meant to be a colour
-			guide.
+			painting some of my miniatures. I don’t go into any great detail as these are just meant to be a guide.
 		</p>
 
-		<Navigation />
+		<nav class="navigation">
+			<section class="navigation__section">
+				<h2 class="navigation__title">
+					<span class="navigation__title-text">Warhammer 40,000</span>
+				</h2>
+
+				<ul class="navigation__items" data-testing="40K">
+					{
+						warhammerRecipes.map((recipe) => (
+							<li><a class="navigation__item" href={`/${recipe.collection}/${recipe.slug}`}>{recipe.data.title}</a></li>
+						))
+					}
+				</ul>
+			</section>
+		</nav>
 	</main>
 </Home>
 
@@ -42,4 +57,42 @@ import Navigation from '../components/Navigation.astro';
 	.blurb {
 		margin-bottom: 2rem;
 	}
+
+	.navigation {
+		text-align: center;
+	}
+
+	.navigation__title {
+		background: transparent url('../assets/images/navigation-background.svg') center / 100% no-repeat;
+		color: var(--light-100);
+		font-size: var(--nav-heading-font-size);
+		margin-bottom: 0.5rem;
+	}
+
+	.navigation__title-text {
+		background: var(--primary-100);
+		padding: 0 1rem;
+	}
+
+	.navigation__section {
+		margin-bottom: 1.2rem;
+		padding-left: 0;
+	}
+
+	.navigation__items {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navigation__item {
+		color: currentColor;
+		line-height: 1.6;
+		text-decoration: none;
+	}
+
+	.navigation__item:is(:hover, :focus) {
+		border-bottom: 1px solid var(--light-100);
+	}
+
 </style>
