@@ -1,11 +1,11 @@
 ---
 title: 'Voidraven Bomber'
-description: 'Painting a dark eldar boomer'
+description: 'Painting a Games workshop, dark eldar void bomber in the paint schemes of cult of strife'
 ---
 
 - <a href="#Paints">Paints</a>
 
-# Void bomber
+# Voidraven Bomber
 
 Key:
 SP - Surface primer
