@@ -3,8 +3,6 @@ title: 'Voidraven Bomber'
 description: 'Painting a Games workshop, dark eldar void bomber in the paint schemes of cult of strife'
 ---
 
-- <a href="#Paints">Paints</a>
-
 # Voidraven Bomber
 
 Key:

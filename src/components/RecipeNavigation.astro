@@ -1,0 +1,102 @@
+---
+import '../assets/styles/naviagtion.css';
+
+import Warhammer from './naviagtion-elements/Warhammer.astro';
+---
+
+<script>
+  /**
+   * This function will append a class to the nav element based on the viewport width
+   * @param isLargeViewPort - Whether the view port is above a size or not
+   */
+  const toggleNavigationClass = (isLargeViewPort: boolean) => {
+    const nav = document.querySelector('nav');
+    isLargeViewPort ? nav.classList.add('slide-from-top') : nav.classList.remove('slide-from-top');
+    isLargeViewPort ? nav.classList.remove('slide-from-side') : nav.classList.add('slide-from-side');
+  }
+
+  const query = window.matchMedia('(min-width: 67.5rem)');
+  /**
+   * Add a resizer observer to add and remove a class to the nav tag to make styling the navigation easier
+   */
+  query.addEventListener('change', (event) => {
+    toggleNavigationClass(event.matches);
+  });
+
+  toggleNavigationClass(query.matches);
+</script>
+
+<nav class="navigation">
+  <section class="navigation__section">
+    <h2 class="navigation__title">
+      <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
+    </h2>
+
+    <ul class="navigation__items">
+      <li>
+        <a href="#" class="navigation__item">Dragonborn</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Draugr</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Sekletons</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="navigation__section">
+    <h2 class="navigation__title">
+      <span class="navigation__title-text">Fallout Wasteland Warfare</span>
+    </h2>
+
+    <ul class="navigation__items">
+      <li>
+        <a href="#" class="navigation__item">Mirelurk queen</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Mirelurk frog crawler</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Mirelurk</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Mirelurk hunters</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Mirelurk Hatchlings & Eggs</a>
+      </li>
+    </ul>
+  </section>
+
+  <Warhammer />
+</nav>
+
+<style>
+    .navigation {
+        background: var(--primary-100);
+        display: flex;
+        flex-direction: column;
+        padding: 5.75rem 15%;
+        text-align: center;
+        height: 100vh;
+        width: 16rem;
+    }
+
+    .slide-from-side {
+        //position: absolute;
+        top: 0;
+        right: -100vw;
+    }
+
+    @media screen and (min-width: 67.5rem) {
+        .navigation {
+            height: 7.8125rem;
+            overflow: hidden;
+        }
+
+        .navigation__section {
+            opacity: 0;
+        }
+    }
+</style>
