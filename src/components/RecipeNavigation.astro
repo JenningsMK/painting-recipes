@@ -13,7 +13,7 @@ import Warhammer from './naviagtion-elements/Warhammer.astro';
     const nav = document.querySelector('nav');
     isLargeViewPort ? nav.classList.add('slide-from-top') : nav.classList.remove('slide-from-top');
     isLargeViewPort ? nav.classList.remove('slide-from-side') : nav.classList.add('slide-from-side');
-  }
+  };
 
   const query = window.matchMedia('(min-width: 67.5rem)');
   /**
@@ -24,9 +24,24 @@ import Warhammer from './naviagtion-elements/Warhammer.astro';
   });
 
   toggleNavigationClass(query.matches);
+
+  const overlay = document.querySelector('.overlay');
+  if (overlay instanceof HTMLElement) {
+    overlay.addEventListener('click', () => {
+      /**
+       * see {@link module:side-in-side-button} for what the button does
+       */
+      const button = document.querySelector('#menu-button');
+      if (button instanceof HTMLButtonElement) {
+        button.dispatchEvent(new MouseEvent('click'));
+      }
+    });
+  }
 </script>
 
-<nav class="navigation">
+<div class="overlay"><!-- This is just for an overlay effect --></div>
+
+<nav class="navigation" inert aria-hidden="true">
   <section class="navigation__section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
@@ -73,6 +88,18 @@ import Warhammer from './naviagtion-elements/Warhammer.astro';
 </nav>
 
 <style>
+    .overlay {
+        background: var(--overlay);
+        backdrop-filter: blur(var(--blur-effect));
+        display: none;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100vw;
+        opacity: 0;
+    }
+
     .navigation {
         background: var(--primary-100);
         display: flex;
@@ -84,9 +111,37 @@ import Warhammer from './naviagtion-elements/Warhammer.astro';
     }
 
     .slide-from-side {
-        //position: absolute;
+        position: fixed;
         top: 0;
-        right: -100vw;
+        right: -100%;
+        transform: translateX(0);
+
+        &.navigation--open {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes overlay {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            --blur-effect: 3px;
+            opacity: 1;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .overlay--appear {
+            animation: 0.5s ease-in-out 1 normal overlay;
+            animation-fill-mode: forwards;
+            display: block;
+        }
+
+        .slide-from-side {
+            transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+        }
     }
 
     @media screen and (min-width: 67.5rem) {
