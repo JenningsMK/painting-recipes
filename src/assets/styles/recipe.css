@@ -1,0 +1,12 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 67.5rem) {
+  h1 {
+    text-shadow: 0 0 5px rgba(var(--dark-100-raw) / 0.8);
+    /*margin-top: -2.2rem;*/
+    position: absolute;
+    top: 4rem;
+  }
+}

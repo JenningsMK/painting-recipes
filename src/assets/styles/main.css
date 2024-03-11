@@ -35,9 +35,10 @@
   }
 
   /* Colours */
+  --dark-100-raw: 30 41 59;
   --light-100: rgba(248, 250, 252, 1);
   --primary-100: rgba(96, 28, 128, 1);
-  --dark-100: rgba(30, 41, 59, 1);
+  --dark-100: rgb(var(--dark-100-raw));
 
   @media (prefers-color-scheme: dark) {
     --primary-100: rgba(46, 9, 63, 1);

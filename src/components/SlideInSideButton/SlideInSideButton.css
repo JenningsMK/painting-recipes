@@ -1,0 +1,43 @@
+@keyframes gradient-grow {
+  50% {
+    --light-gradient: 100%;
+  }
+  to {
+    --light-gradient: 0;
+  }
+}
+
+.menu-button {
+  /*
+     * It would be nice to have the svg change colour as the button changes
+     * TODO Have a look at changing the svg as the animation is playing,
+     * try and make the lines white as the animation is playing.
+     */
+  background:
+    url('../../assets/images/hamburger.svg') no-repeat center / auto,
+    radial-gradient(circle at center, rgba(96, 28, 128, 1) var(--light-gradient), rgba(255, 255, 255, 1) 0);
+  border: none;
+  border-radius: 25px;
+  box-shadow: var(--dark-100) 1px 1px 10px 1px;
+  bottom: 1rem;
+  height: 2.1875rem;
+  right: 1rem;
+  position: fixed;
+  cursor: pointer;
+  width: 2.1875rem;
+}
+
+.menu-button:is(:hover, :focus-visible) {
+  outline: none;
+  transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu-button {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .menu-button--animated {
+    animation: 0.75s ease-in-out 1 normal gradient-grow;
+  }
+}
