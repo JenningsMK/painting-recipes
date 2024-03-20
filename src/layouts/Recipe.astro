@@ -1,0 +1,46 @@
+---
+import '../assets/styles/main.css';
+import '../assets/styles/recipe.css';
+
+import Navigation from '../components/recipe-navigation/RecipeNavigation.astro';
+import SlideInSideButton from '../components/slide-in-side-button/SlideInSideButton.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" crossorigin>
+
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title} | Painting Recipes</title>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional" />
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+		<script src="../assets/scripts/handle-buttons.ts"></script>
+	</head>
+
+	<body>
+		<Navigation />
+
+		<main>
+			<slot />
+		</main>
+
+		<SlideInSideButton />
+	</body>
+</html>

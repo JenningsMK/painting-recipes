@@ -1,0 +1,96 @@
+.overlay {
+  background: var(--overlay);
+  backdrop-filter: blur(var(--blur-effect));
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  opacity: 0;
+  display: none;
+}
+
+.navigation {
+  background: var(--primary-100);
+  display: flex;
+  flex-direction: column;
+  padding: 5.75rem 15%;
+  text-align: center;
+  overflow: auto;
+}
+
+.slide-from-side {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  transform: translateX(0);
+  height: 100vh;
+  width: 16rem;
+
+  &.navigation--open {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes overlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .navigation {
+    box-shadow: var(--box-shadow);
+    padding: 8rem 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    transform: translateY(-63%);
+    overflow: unset;
+    max-height: 13.1875rem;
+
+    .navigation__section {
+      clip-path: xywh(0 0 100% 0);
+    }
+  }
+
+  .slide-from-top {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    &.navigation--open {
+      padding-top: 10rem;
+      transform: translateY(0);
+      max-height: unset;
+
+      .navigation__section {
+        clip-path: xywh(0 0 100% 100%);
+      }
+    }
+  }
+
+  .navigation__section {
+    flex-basis: 19.125rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .overlay--appear {
+    animation: 0.5s ease-in-out 1 normal overlay;
+    animation-fill-mode: forwards;
+    display: block;
+  }
+
+  .slide-from-side,
+  .slide-from-top {
+    transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .navigation--open .navigation__section {
+    transition: clip-path 0.2s ease-in 0.3s;
+  }
+}

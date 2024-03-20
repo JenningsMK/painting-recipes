@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+const warhammerRecipes = await getCollection('40K');
+---
+
+<section class="navigation__section">
+  <h2 class="navigation__title">
+    <span class="navigation__title-text">Warhammer 40,000</span>
+  </h2>
+
+  <ul class="navigation__items" data-testing="40K">
+    {
+      warhammerRecipes.map((recipe) => (
+        <li><a class="navigation__item" href={`/${recipe.collection}/${recipe.slug}`}>{recipe.data.title}</a></li>
+      ))
+    }
+  </ul>
+</section>
+

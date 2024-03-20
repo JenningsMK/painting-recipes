@@ -1,7 +1,3 @@
-.navigation {
-  text-align: center;
-}
-
 .navigation__title {
   background: transparent url('../images/navigation-background.svg') center / 100% no-repeat;
   color: var(--light-100);

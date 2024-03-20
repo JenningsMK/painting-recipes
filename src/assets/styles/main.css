@@ -1,3 +1,15 @@
+@property --light-gradient {
+  syntax: '<length-percentage>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --blur-effect {
+  syntax: '<length>';
+  initial-value: 0;
+  inherits: false;
+}
+
 :root {
   /* Fonts */
   --sig: Signika Negative, Segoe UI, sans-serif;
@@ -23,16 +35,20 @@
   }
 
   /* Colours */
+  --dark-100-raw: 30 41 59;
   --light-100: rgba(248, 250, 252, 1);
   --primary-100: rgba(96, 28, 128, 1);
+  --dark-100: rgb(var(--dark-100-raw));
 
   @media (prefers-color-scheme: dark) {
     --primary-100: rgba(46, 9, 63, 1);
   }
 
   /* Effects */
+  --box-shadow: 0 10px 10px -10px rgba(var(--dark-100-raw) / 0.8);
 
   /* Overlays */
+  --overlay: rgba(30, 32, 36, 0.4);
 }
 
 body {
@@ -42,4 +58,14 @@ body {
 
 h1 {
   font: 600 var(--page-title-size) var(--page-title-font);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

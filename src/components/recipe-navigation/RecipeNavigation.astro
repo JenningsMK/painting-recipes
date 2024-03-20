@@ -1,9 +1,16 @@
 ---
-import '../assets/styles/naviagtion.css';
+import '../../assets/styles/naviagtion.css';
+import './RecipeNavigation.css';
+
+import Warhammer from '../naviagtion-elements/Warhammer.astro';
+import SlideInTopButton from '../slide-in-top-button/SlideInTopButton.astro';
 ---
 
+<script src="./RecipeNavigation.ts"></script>
+
 <div class="overlay"><!-- This is just for an overlay effect --></div>
-<nav class="navigation">
+
+<nav class="navigation" id="main-nav">
   <section class="navigation__section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
@@ -48,16 +55,23 @@ import '../assets/styles/naviagtion.css';
 
   <section class="navigation__section">
     <h2 class="navigation__title">
-      <span class="navigation__title-text">Warhammer 40,000</span>
+      <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
     </h2>
 
-    <ul class="navigation__items" data-testing="40K">
+    <ul class="navigation__items">
       <li>
-        <a href="/40K/emperors-champion" class="navigation__item">Emperors Champion</a>
+        <a href="#" class="navigation__item">Dragonborn</a>
       </li>
       <li>
-        <a href="/40K/voidraven-bomber" class="navigation__item">Voidraven Bomber</a>
+        <a href="#" class="navigation__item">Draugr</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Sekletons</a>
       </li>
     </ul>
   </section>
+
+  <Warhammer />
+
+  <SlideInTopButton />
 </nav>

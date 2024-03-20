@@ -1,6 +1,8 @@
 ---
-import Home from '../layouts/Splash.astro';
-import Navigation from '../components/Navigation.astro';
+import '../assets/styles/naviagtion.css';
+
+import Home from '../layouts/Index.astro';
+import Warhammer from '../components/naviagtion-elements/Warhammer.astro';
 ---
 
 <Home>
@@ -11,35 +13,33 @@ import Navigation from '../components/Navigation.astro';
 	<main>
 		<p class="blurb">
 			I have started to write down some of the painting recipes that I have been using over the year’s while
-			painting some of my miniatures. I don’t go into any great detail as these are just meant to be a colour
-			guide.
+			painting some of my miniatures. I don’t go into any great detail as these are just meant to be a guide.
 		</p>
 
-		<Navigation />
+		<nav class="navigation">
+			<Warhammer />
+		</nav>
 	</main>
 </Home>
 
 <style>
 	body {
 		background: var(--primary-100);
-	}
-
-	body {
 		padding: 4.0625rem 2.25rem
 	}
 
-	main,
 	.page-title {
 		width: 21rem;
 		margin-inline: auto;
-	}
-
-	.page-title {
 		margin-bottom: 1.5rem;
 		text-align: center;
 	}
 
 	.blurb {
 		margin-bottom: 2rem;
+	}
+
+	.navigation {
+		text-align: center;
 	}
 </style>

@@ -35,3 +35,5 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('getDescription', () => cy.get('head > meta[name="description"]'));
