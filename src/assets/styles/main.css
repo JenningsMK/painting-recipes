@@ -45,6 +45,7 @@
   }
 
   /* Effects */
+  --box-shadow: 0 10px 10px -10px rgba(var(--dark-100-raw) / 0.8);
 
   /* Overlays */
   --overlay: rgba(30, 32, 36, 0.4);

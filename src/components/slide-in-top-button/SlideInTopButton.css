@@ -1,0 +1,43 @@
+.slide-in-top-button {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--light-100);
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+  bottom: -1.6875rem;
+  color: var(--primary-100);
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  width: 3.75rem;
+  flex-grow: 0;
+  position: absolute;
+  right: 2rem;
+
+  &[data-state='opened'] svg {
+    transform: rotateX(180deg);
+  }
+
+  &:is(:hover, :focus-visible) {
+    transform: scale(1.2);
+  }
+
+  svg {
+    aspect-ratio: 1;
+    width: 38px;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .slide-in-top-button {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide-in-top-button,
+  .slide-in-top-button svg {
+    transition: transform 0.3s ease-in-out;
+  }
+}

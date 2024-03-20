@@ -3,13 +3,14 @@ import '../../assets/styles/naviagtion.css';
 import './RecipeNavigation.css';
 
 import Warhammer from '../naviagtion-elements/Warhammer.astro';
+import SlideInTopButton from '../slide-in-top-button/SlideInTopButton.astro';
 ---
 
 <script src="./RecipeNavigation.ts"></script>
 
 <div class="overlay"><!-- This is just for an overlay effect --></div>
 
-<nav class="navigation" inert aria-hidden="true">
+<nav class="navigation" id="main-nav">
   <section class="navigation__section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
@@ -52,5 +53,25 @@ import Warhammer from '../naviagtion-elements/Warhammer.astro';
     </ul>
   </section>
 
+  <section class="navigation__section">
+    <h2 class="navigation__title">
+      <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
+    </h2>
+
+    <ul class="navigation__items">
+      <li>
+        <a href="#" class="navigation__item">Dragonborn</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Draugr</a>
+      </li>
+      <li>
+        <a href="#" class="navigation__item">Sekletons</a>
+      </li>
+    </ul>
+  </section>
+
   <Warhammer />
+
+  <SlideInTopButton />
 </nav>

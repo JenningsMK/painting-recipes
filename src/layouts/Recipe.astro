@@ -2,8 +2,8 @@
 import '../assets/styles/main.css';
 import '../assets/styles/recipe.css';
 
-import Navigation from '../components/RecipeNavigation/RecipeNavigation.astro';
-import SlideInSideButton from '../components/SlideInSideButton/SlideInSideButton.astro';
+import Navigation from '../components/recipe-navigation/RecipeNavigation.astro';
+import SlideInSideButton from '../components/slide-in-side-button/SlideInSideButton.astro';
 
 interface Props {
   title: string;
@@ -30,6 +30,8 @@ const { title, description } = Astro.props;
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=optional" />
 		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+		<script src="../assets/scripts/handle-buttons.ts"></script>
 	</head>
 
 	<body>

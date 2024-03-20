@@ -6,7 +6,6 @@
   top: 0;
   position: fixed;
   width: 100vw;
-  /* TODO (Mark) - Have a look to see if we can use transform for this and get around the repaint */
   opacity: 0;
   display: none;
 }
@@ -39,18 +38,24 @@
   }
 
   to {
-    --blur-effect: 3px;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 67.5rem) {
   .navigation {
-    box-shadow: 0 10px 10px -10px rgba(var(--dark-100-raw) / 0.8);
+    box-shadow: var(--box-shadow);
     padding: 8rem 1.5rem 0;
     flex-wrap: wrap;
     gap: 2rem;
-    clip-path: polygon(0 0, 100% 0, 100% 125px, 0 125px);
+    position: relative;
+    transform: translateY(-63%);
+    overflow: unset;
+    max-height: 13.1875rem;
+
+    .navigation__section {
+      clip-path: xywh(0 0 100% 0);
+    }
   }
 
   .slide-from-top {
@@ -59,7 +64,12 @@
 
     &.navigation--open {
       padding-top: 10rem;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transform: translateY(0);
+      max-height: unset;
+
+      .navigation__section {
+        clip-path: xywh(0 0 100% 100%);
+      }
     }
   }
 
@@ -75,11 +85,12 @@
     display: block;
   }
 
-  .slide-from-side {
+  .slide-from-side,
+  .slide-from-top {
     transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
   }
 
-  .slide-from-top {
-    transition: clip-path 0.5s cubic-bezier(1, 0, 0, 1);
+  .navigation--open .navigation__section {
+    transition: clip-path 0.2s ease-in 0.3s;
   }
 }
