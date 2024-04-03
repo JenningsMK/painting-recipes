@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^6.21.0
     version: 6.21.0(eslint@8.56.0)(typescript@5.3.3)
   cypress:
-    specifier: ^13.6.6
-    version: 13.6.6
+    specifier: ^13.7.2
+    version: 13.7.2
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -1675,8 +1675,8 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  /cypress@13.6.6:
-    resolution: {integrity: sha512-S+2S9S94611hXimH9a3EAYt81QM913ZVA03pUmGDfLTFa5gyp85NJ8dJGSlEAEmyRsYkioS1TtnWtbv/Fzt11A==}
+  /cypress@13.7.2:
+    resolution: {integrity: sha512-FF5hFI5wlRIHY8urLZjJjj/YvfCBrRpglbZCLr/cYcL9MdDe0+5usa8kTIrDHthlEc9lwihbkb5dmwqBDNS2yw==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
