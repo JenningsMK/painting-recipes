@@ -1,6 +1,11 @@
-describe('What the page should look like', () => {
+import mainNavigation from '../../intergration/main-navigation';
+
+describe('Testing the content of the page', () => {
   beforeEach(() => {
     cy.visit('/40K/voidraven-bomber');
+    cy.get('[data-test="slide-in-side-button"').as('button-side');
+    cy.get('[data-test="slide-in-top-button"').as('button-top');
+    cy.get('[data-test="main-nav"]').as('nav');
   });
 
   it('Has the correct page details', () => {
@@ -12,56 +17,40 @@ describe('What the page should look like', () => {
     );
     cy.get('h1').should('have.text', 'Voidraven Bomber');
   });
-});
 
-describe.skip('What the activation will be doing', () => {
-  beforeEach(() => {
-    cy.visit('/40K/voidraven-bomber');
+  it('That the page is set up correctly', () => {
+    mainNavigation.currentPageCheck('/40K/voidraven-bomber');
+    mainNavigation.mainTagCheckClosed();
+    mainNavigation.mainNavigationClosedAllyCheck();
   });
 
-  it('Will slide in from the side on smaller viewports', () => {
-    cy.get('button').click();
-    cy.get('nav').should('have.attr', 'class').and('include', 'slide-from-side');
+  describe('small viewport checks', () => {
+    it('Has the correct class to allow it to slide in from the side', () => {
+      mainNavigation.smallViewportNavigation();
+    });
+
+    it('When the main navigation is toggled', () => {
+      mainNavigation.clickSmallViewportMenuButton();
+      mainNavigation.noScrollCheck();
+      mainNavigation.mainTagCheckOpen();
+      mainNavigation.mainNavigationOpenedAllyCheck();
+    });
   });
 
-  it('Will slide in from the side on smaller viewports', () => {
-    cy.viewport(1920, 1080);
-    cy.get('button').click();
-    cy.get('nav').should('have.attr', 'class').and('include', 'slide-from-top');
-  });
+  describe('large viewport checks', () => {
+    beforeEach(() => {
+      cy.viewport(1920, 1080);
+    });
 
-  it('Has the aria-describedby attribute when the URL is the same as the link', () => {
-    cy.get('[aria-describedby="current"]').as('currentLink');
-    cy.get('@currentLink').should('have.length', '1');
-    cy.get('@currentLink').should('have.attr', 'href', '/40K/emperors-champion');
-  });
+    it('Has the correct class to allow it to side in from the top of the page', () => {
+      mainNavigation.largeViewportNavigation();
+    });
 
-  it('Appends the no-scroll class to the body when clicked', () => {
-    cy.contains('#menu-button', 'open menu').trigger('click');
-    cy.get('body').should('have.attr', 'class', 'no-scroll');
-  });
-
-  it('The label within the button updates when button is clicked', () => {
-    cy.get('#menu-button span').should('have.text', 'open menu');
-    cy.contains('#menu-button', 'open menu').trigger('click');
-    cy.get('#menu-button span').should('have.text', 'close menu');
-  });
-
-  it('Has the slide in & out motion when the button is clicked', () => {
-    cy.get('nav.navigation').should('not.be.visible');
-    cy.get('nav.navigation').should('have.attr', 'aria-hidden');
-    cy.get('nav.navigation').should('have.attr', 'inert');
-    cy.contains('#menu-button', 'open menu').trigger('click');
-    cy.get('nav.navigation').should('be.visible');
-    cy.get('nav.navigation').should('not.have.attr', 'aria-hidden');
-    cy.get('nav.navigation').should('not.have.attr', 'inert');
-  });
-
-  it('Adds the aria-hidden and inert attributes to the main when the overlay is open', () => {
-    cy.get('main').should('not.have.attr', 'aria-hidden');
-    cy.get('main').should('not.have.attr', 'inert');
-    cy.contains('#menu-button', 'open menu').trigger('click');
-    cy.get('main').should('have.attr', 'aria-hidden');
-    cy.get('main').should('have.attr', 'inert');
+    it('When the main navigation is toggled', () => {
+      mainNavigation.clickLargeViewportMenuButton();
+      mainNavigation.noScrollCheck();
+      mainNavigation.mainTagCheckOpen();
+      mainNavigation.mainNavigationOpenedAllyCheck();
+    });
   });
 });

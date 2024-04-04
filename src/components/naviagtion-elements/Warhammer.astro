@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 const warhammerRecipes = await getCollection('40K');
 ---
 
-<section class="navigation__section">
+<section class="navigation__section" data-test="main-nav-section">
   <h2 class="navigation__title">
     <span class="navigation__title-text">Warhammer 40,000</span>
   </h2>

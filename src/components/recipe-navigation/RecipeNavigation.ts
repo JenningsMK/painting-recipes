@@ -111,3 +111,10 @@ window.addEventListener('keydown', (event: KeyboardEvent) => {
     }
   }
 });
+
+/**
+ * Adds 'aria-describedby' to the current navigation link based on the current URL
+ */
+const currentURL = window.location.pathname;
+const linkTag = document.querySelector(`[href="${currentURL}"]`);
+linkTag?.setAttribute('aria-describedby', 'current');
