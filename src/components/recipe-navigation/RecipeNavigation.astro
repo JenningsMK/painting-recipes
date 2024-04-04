@@ -10,8 +10,8 @@ import SlideInTopButton from '../slide-in-top-button/SlideInTopButton.astro';
 
 <div class="overlay"><!-- This is just for an overlay effect --></div>
 
-<nav class="navigation" id="main-nav">
-  <section class="navigation__section">
+<nav class="navigation" id="main-nav" data-test="main-nav">
+  <section class="navigation__section" data-test="main-nav-section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
     </h2>
@@ -29,7 +29,7 @@ import SlideInTopButton from '../slide-in-top-button/SlideInTopButton.astro';
     </ul>
   </section>
 
-  <section class="navigation__section">
+  <section class="navigation__section" data-test="main-nav-section">
     <h2 class="navigation__title">
       <span class="navigation__title-text">Fallout Wasteland Warfare</span>
     </h2>
@@ -49,24 +49,6 @@ import SlideInTopButton from '../slide-in-top-button/SlideInTopButton.astro';
       </li>
       <li>
         <a href="#" class="navigation__item">Mirelurk Hatchlings & Eggs</a>
-      </li>
-    </ul>
-  </section>
-
-  <section class="navigation__section">
-    <h2 class="navigation__title">
-      <span class="navigation__title-text">Elder Scrolls: Call to Arms</span>
-    </h2>
-
-    <ul class="navigation__items">
-      <li>
-        <a href="#" class="navigation__item">Dragonborn</a>
-      </li>
-      <li>
-        <a href="#" class="navigation__item">Draugr</a>
-      </li>
-      <li>
-        <a href="#" class="navigation__item">Sekletons</a>
       </li>
     </ul>
   </section>

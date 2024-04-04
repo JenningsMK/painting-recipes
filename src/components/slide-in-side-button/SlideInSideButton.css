@@ -41,3 +41,9 @@
     animation: 0.75s ease-in-out 1 normal gradient-grow;
   }
 }
+
+@media screen and (min-width: 67.5rem) {
+  .menu-button {
+    display: none;
+  }
+}
