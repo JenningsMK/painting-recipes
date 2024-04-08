@@ -9,6 +9,7 @@ jobs:
       # Install pnpm dependencies, cache them correctly
       - name: Install pnpm
         run: npm install -g pnpm@8
+
       - name: Get pnpm store directory
         shell: bash
         run: |
@@ -24,4 +25,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6.1.0
         with:
-          start: npm start
+          start: pnpm start
