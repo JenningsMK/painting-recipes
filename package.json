@@ -15,8 +15,7 @@
   "lint-staged": {
     "**/*": [
       "prettier --write --ignore-unknown",
-      "pnpm run lint",
-      "cypress run --e2e --headless"
+      "pnpm run lint"
     ]
   },
   "dependencies": {
