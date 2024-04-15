@@ -9,7 +9,7 @@ declare global {
        * Gets the description from the head of the document
        * @example cy.getDescription() == <meta name="description" />
        */
-      getDescription(): Chainable<JQuery<HTMLElement>>;
+      getDescription(): Chainable;
     }
   }
 }
