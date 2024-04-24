@@ -10,19 +10,19 @@ describe('Get Paints', () => {
       [
         {
           "brand": "Vallejo",
-          "colour": "64 51 54 1",
+          "colour": "rgba(64, 51, 54, 1)",
           "id": 70.822,
           "name": "German C.Black",
         },
         {
           "brand": "The Army Painter",
-          "colour": "255 149 90 1",
+          "colour": "rgb(255, 149, 90, 1)",
           "id": "WP1470",
           "name": "Light Tone",
         },
         {
           "brand": "Warcolours",
-          "colour": "109 253 0 1",
+          "colour": "rgb(109, 253, 0, 1)",
           "name": "Green 2",
         },
       ]

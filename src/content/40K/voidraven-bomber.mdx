@@ -1,7 +1,23 @@
 ---
 title: 'Voidraven Bomber'
 description: 'Painting a Games workshop, dark eldar void bomber in the paint schemes of cult of strife'
+paints:
+  - Black
+  - UK Bronze Green
+  - Scurvy Green
+  - Exhaust Manifold
+  - USAF Medium grey
+  - ATM-11 Blue Grey
+  - Nato Black
+  - Black
+  - Skin Wash
+  - Purple tone
+  - Emerald
+  - Sun Yellow
+  - Glacier Blue
 ---
+
+import PaintSwatch from '../../components/paint-swatch/PaintSwatch.astro';
 
 # Voidraven Bomber
 
@@ -12,6 +28,8 @@ MA - Model Air
 MC - Model Color
 GI - Game Ink
 AP - Army painter
+
+<PaintSwatch swatches={frontmatter.paints}></PaintSwatch>
 
 ## Paints
 
@@ -27,7 +45,7 @@ AP - Army painter
 - AP, Purple tone
 - MC, 70.838: Emerald
 - GC, 72.006: Sun Yellow
-- GC, 72.095L Glacier Blue
+- GC, 72.095: Glacier Blue
 
 Armor:
 Undercoat with a mix of both 70.602 & 70.607

@@ -22,25 +22,31 @@
   --list-font: var(--nun);
 
   --page-title-size: 2.5rem;
-  --section-title-size: 1rem;
+  --section-title-size: 2rem;
   --body-font-size: 1rem;
   --nav-heading-font-size: 1rem;
   --list-font-size: 1rem;
 
   @media (min-width: 67.5rem) {
     --page-title-size: 2.8125rem;
-    --section-title-size: 2.5rem;
+    --section-title-size: 2.25rem;
     --body-font-size: 1.125rem;
     --nav-heading-font-size: 1.125rem;
   }
 
   /* Colours */
   --dark-100-raw: 30 41 59;
+  --dark-80-raw: 18 5 31;
   --light-100: rgba(248, 250, 252, 1);
   --primary-100: rgba(96, 28, 128, 1);
   --dark-100: rgb(var(--dark-100-raw));
+  --dark-80: rgb(var(--dark-80-raw));
+  --text-colour: var(--dark-100);
+  --page-colour: var(--light-100);
 
   @media (prefers-color-scheme: dark) {
+    --text-colour: var(--light-100);
+    --page-colour: var(--dark-80);
     --primary-100: rgba(46, 9, 63, 1);
   }
 
@@ -52,7 +58,8 @@
 }
 
 body {
-  color: var(--light-100);
+  color: var(--text-colour);
+  background: var(--page-colour);
   font: 400 var(--body-font-size) var(--body-font);
 }
 
