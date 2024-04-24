@@ -1,25 +1,96 @@
 [
   {
-    "name": "German C.Black",
+    "name": "Black",
     "brand": "Vallejo",
-    "id": 70.822,
-    "colour": "64 51 54 1"
+    "id": 74.602,
+    "colour": "rgba(1, 1, 1, 1)"
   },
   {
-    "name": "Lavis Oxyde",
+    "name": "UK Bronze Green",
     "brand": "Vallejo",
-    "id": 76.506,
-    "colour": "240 126 74 1"
+    "id": 70.607,
+    "colour": "rgba(62, 64, 63, 1)"
   },
   {
-    "name": "Light Tone",
+    "name": "Scurvy Green",
+    "brand": "Vallejo",
+    "id": 72.027,
+    "colour": "rgba(30, 77, 68, 1)"
+  },
+  {
+    "name": "Exhaust Manifold",
+    "brand": "Vallejo",
+    "id": 77.723,
+    "colour": "linear-gradient(141deg, rgba(128,123,116,1) 0%, rgba(255,255,255,1) 50%, rgba(128,123,116,1) 100%);"
+  },
+  {
+    "name": "USAF Medium grey",
+    "brand": "Vallejo",
+    "id": 71.275,
+    "colour": "rgba(130, 131, 133, 1)"
+  },
+  {
+    "name": "ATM-11 Blue Grey",
+    "brand": "Vallejo",
+    "id": 71.304,
+    "colour": "rgba(91, 97, 107)"
+  },
+  {
+    "name": "Nato Black",
+    "brand": "Vallejo",
+    "id": 71.251,
+    "colour": "rgba(58, 58, 58, 1)"
+  },
+  {
+    "name": "Black",
+    "brand": "Vallejo",
+    "id": 72.094,
+    "colour": "rgba(0, 0, 0 ,1)"
+  },
+  {
+    "name": "Skin Wash",
+    "brand": "Vallejo",
+    "id": 72.093,
+    "colour": "rgba(91, 45, 39, 1)"
+  },
+  {
+    "name": "Purple tone",
     "brand": "The Army Painter",
-    "id": "WP1470",
-    "colour": "255 149 90 1"
+    "colour": "rgba(44, 32, 82, 1)"
   },
   {
-    "name": "Green 2",
+    "name": "Emerald",
+    "brand": "Vallejo",
+    "id": 70.838,
+    "colour": "rgba(1, 99, 73, 1)"
+  },
+  {
+    "name": "Sun Yellow",
+    "brand": "Vallejo",
+    "id": 72.006,
+    "colour": "rgba(246, 162, 1, 1)"
+  },
+  {
+    "name": "Glacier Blue",
+    "brand": "Vallejo",
+    "id": 72.095,
+    "colour": "rgba(205, 216, 241, 1)"
+  },
+  {
+    "brand": "Vallejo",
+    "colour": "rgba(64, 51, 54, 1)",
+    "id": 70.822,
+    "name": "German C.Black"
+  },
+  {
+    "brand": "The Army Painter",
+    "colour": "rgb(255, 149, 90, 1)",
+    "id": "WP1470",
+    "name": "Light Tone"
+  },
+  {
     "brand": "Warcolours",
-    "colour": "109 253 0 1"
+    "colour": "rgb(109, 253, 0, 1)",
+    "name": "Green 2"
   }
 ]

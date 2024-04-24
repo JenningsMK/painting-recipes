@@ -1,4 +1,5 @@
 import mainNavigation from '../../intergration/main-navigation';
+import paintSwatch from '../../intergration/paint-swatch';
 
 describe('Testing the content of the page', () => {
   beforeEach(() => {
@@ -52,5 +53,65 @@ describe('Testing the content of the page', () => {
       mainNavigation.mainTagCheckOpen();
       mainNavigation.mainNavigationOpenedAllyCheck();
     });
+  });
+
+  describe('The paint swatch', () => {
+    beforeEach(() => {
+      cy.get('[data-test="paint-swatch"]').as('paint-swatch');
+    });
+
+    paintSwatch.tests([
+      {
+        name: 'Black',
+        id: '74.602',
+      },
+      {
+        name: 'UK Bronze Green',
+        id: '70.607',
+      },
+      {
+        name: 'Scurvy Green',
+        id: '72.027',
+      },
+      {
+        name: 'Exhaust Manifold',
+        id: '77.723',
+      },
+      {
+        name: 'USAF Medium grey',
+        id: '71.275',
+      },
+      {
+        name: 'ATM-11 Blue Grey',
+        id: '71.304',
+      },
+      {
+        name: 'Nato Black',
+        id: '71.251',
+      },
+      {
+        name: 'Black',
+        id: '72.094',
+      },
+      {
+        name: 'Skin Wash',
+        id: '72.093',
+      },
+      {
+        name: 'Purple tone',
+      },
+      {
+        name: 'Emerald',
+        id: '70.838',
+      },
+      {
+        name: 'Sun Yellow',
+        id: '72.006',
+      },
+      {
+        name: 'Glacier Blue',
+        id: '72.095',
+      },
+    ]);
   });
 });
