@@ -1,5 +1,6 @@
 ---
 import { getPaints } from '../../controllers/paints';
+import './PaintSwatch.css';
 
 interface Props {
   swatches: string[]
@@ -24,37 +25,3 @@ const paints = await getPaints(swatches);
     </div>
   ))}
 </section>
-
-<style>
-  .paint-swatches {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 0 3.5625rem;
-      margin-bottom: 2.25rem;
-      gap: 1rem 1.5rem;
-      max-width: 16.625rem;
-      margin-inline: auto;
-
-      h2 {
-          text-align: center;
-          grid-column: span 2;
-          font-size: var(--section-title-size);
-          font-weight: normal;
-          font-family: var(--section-title-font);
-          margin: 0;
-      }
-
-      .swatch-card {
-          display: grid;
-          grid-template-rows: 2rem 1fr;
-          border: 1px solid rgb(224, 230, 236);
-          text-align: center;
-      }
-
-      .paint-info {
-          align-self: center;
-          margin: .5rem 0;
-          padding: 0 .375rem;
-      }
-  }
-</style>

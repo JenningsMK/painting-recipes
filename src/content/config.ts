@@ -8,6 +8,7 @@ const paintingRecipes = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    paints: z.array(z.string()),
   }),
 });
 

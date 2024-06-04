@@ -1,0 +1,15 @@
+---
+import './ListSection.css';
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props;
+---
+
+<div class="painting-steps">
+  <h2 class="painting-steps__title">{title}</h2>
+
+  <slot />
+</div>

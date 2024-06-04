@@ -11,6 +11,8 @@
 }
 
 :root {
+  color-scheme: light dark;
+
   /* Fonts */
   --sig: Signika Negative, Segoe UI, sans-serif;
   --nun: Nunito, Arial, sans-serif;
@@ -38,17 +40,11 @@
   --dark-100-raw: 30 41 59;
   --dark-80-raw: 18 5 31;
   --light-100: rgba(248, 250, 252, 1);
-  --primary-100: rgba(96, 28, 128, 1);
+  --primary-100: light-dark(rgba(96, 28, 128, 1), rgba(46, 9, 63, 1));
   --dark-100: rgb(var(--dark-100-raw));
   --dark-80: rgb(var(--dark-80-raw));
-  --text-colour: var(--dark-100);
-  --page-colour: var(--light-100);
-
-  @media (prefers-color-scheme: dark) {
-    --text-colour: var(--light-100);
-    --page-colour: var(--dark-80);
-    --primary-100: rgba(46, 9, 63, 1);
-  }
+  --text-colour: light-dark(var(--dark-100), var(--light-100));
+  --page-colour: light-dark(var(--light-100), var(--dark-80));
 
   /* Effects */
   --box-shadow: 0 10px 10px -10px rgba(var(--dark-100-raw) / 0.8);
