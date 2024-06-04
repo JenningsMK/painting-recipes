@@ -1,0 +1,20 @@
+.painting-steps {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+
+  .painting-steps__title {
+    border-bottom: 1px solid light-dark(var(--dark-100), var(--light-100));
+    font-weight: bold;
+    font-size: var(--list-font-size);
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  ol {
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

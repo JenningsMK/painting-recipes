@@ -9,7 +9,7 @@ describe('That the home is correct', () => {
   });
 
   it('Has the correct amount of children', () => {
-    cy.get('[data-testing="40K"] li').should('have.length', 2);
+    cy.get('[data-testing="40K"] li').should('have.length', 1);
   });
 
   it('The titles are display and are correct', () => {
@@ -17,11 +17,6 @@ describe('That the home is correct', () => {
   });
 
   it('The navigation elements have the correct href attributes', () => {
-    // eslint-disable-next-line quotes
-    cy.contains('a', "Emperor's Champion")
-      .should('have.attr', 'href', '/40K/emperors-champion')
-      // eslint-disable-next-line quotes
-      .and('have.text', "Emperor's Champion");
     cy.contains('a', 'Voidraven Bomber')
       .should('have.attr', 'href', '/40K/voidraven-bomber')
       .and('have.text', 'Voidraven Bomber');

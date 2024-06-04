@@ -20,8 +20,9 @@
     ]
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.3.1",
-    "astro": "^4.8.6"
+    "@astrojs/mdx": "^3.0.1",
+    "astro": "^4.9.1",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
@@ -36,5 +37,5 @@
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
-  "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"
+  "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7"
 }
