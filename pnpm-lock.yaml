@@ -25,8 +25,8 @@ importers:
         specifier: ^6.21.0
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       cypress:
-        specifier: ^13.10.0
-        version: 13.10.0
+        specifier: ^13.11.0
+        version: 13.11.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -1265,8 +1265,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  cypress@13.10.0:
-    resolution: {integrity: sha512-tOhwRlurVOQbMduX+KonoMeQILs2cwR3yHGGENoFvvSoLUBHmJ8b9/n21gFSDqjlOJ+SRVcwuh+fG/JDsHsT6Q==}
+  cypress@13.11.0:
+    resolution: {integrity: sha512-NXXogbAxVlVje4XHX+Cx5eMFZv4Dho/2rIcdBHg9CNPFUGZdM4cRdgIgM7USmNYsC12XY0bZENEQ+KBk72fl+A==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
 
@@ -4375,7 +4375,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cypress@13.10.0:
+  cypress@13.11.0:
     dependencies:
       '@cypress/request': 3.0.1
       '@cypress/xvfb': 1.2.4(supports-color@8.1.1)
