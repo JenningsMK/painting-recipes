@@ -22,7 +22,7 @@
 }
 
 .navigation__item {
-  color: currentColor;
+  color: var(--light-100);
   line-height: 1.6;
   text-decoration: none;
 }
