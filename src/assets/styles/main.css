@@ -43,6 +43,7 @@
   --primary-100: light-dark(rgba(96, 28, 128, 1), rgba(46, 9, 63, 1));
   --dark-100: rgb(var(--dark-100-raw));
   --dark-80: rgb(var(--dark-80-raw));
+  /* Text colour should be dark on light and light on dark */
   --text-colour: light-dark(var(--dark-100), var(--light-100));
   --page-colour: light-dark(var(--light-100), var(--dark-80));
 

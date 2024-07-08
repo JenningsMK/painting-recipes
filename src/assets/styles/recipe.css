@@ -46,9 +46,7 @@ main {
 }
 
 @media (prefers-color-scheme: light) and (max-width: 67.5rem) {
-  main {
-    h1 {
-      color: var(--dark-100);
-    }
+  main h1 {
+    color: var(--dark-100);
   }
 }
