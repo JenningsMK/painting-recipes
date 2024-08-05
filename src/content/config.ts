@@ -16,4 +16,5 @@ const paintingRecipes = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   '40K': paintingRecipes,
+  warcry: paintingRecipes,
 };

@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+const warcryRecipes = await getCollection('warcry');
+---
+
+<section class="navigation__section" data-test="main-nav-section">
+  <h2 class="navigation__title">
+    <span class="navigation__title-text">Warcry</span>
+  </h2>
+
+  <ul class="navigation__items" data-testing="40K">
+    {
+      warcryRecipes.map((recipe) => (
+        <li><a class="navigation__item" href={`/${recipe.collection}/${recipe.slug}`}>{recipe.data.title}</a></li>
+      ))
+    }
+  </ul>
+</section>
+

@@ -77,10 +77,10 @@
     "colour": "rgba(205, 216, 241, 1)"
   },
   {
-    "brand": "Vallejo",
+    "name": "Camouflage Black Brown",
     "colour": "rgba(64, 51, 54, 1)",
     "id": 70.822,
-    "name": "German C.Black"
+    "brand": "Vallejo"
   },
   {
     "brand": "The Army Painter",
@@ -92,5 +92,112 @@
     "brand": "Warcolours",
     "colour": "rgb(109, 253, 0, 1)",
     "name": "Green 2"
+  },
+  {
+    "name": "Dark Grey",
+    "colour": "rgb(49 47 50)",
+    "id": 70.994,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Burnt Red",
+    "colour": "rgb(118 60 57)",
+    "id": 70.814,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Dark Gunmetal",
+    "colour": "linear-gradient(141deg, rgb(142 143 146) 0%, rgb(218 219 219) 50%, rgb(142 143 146) 100%);",
+    "id": 72.054,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Chipping Medium",
+    "colour": "rgba(225, 225, 255, 0)",
+    "id": 76.55,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Yellow Olive",
+    "colour": "rgb(55 59 50)",
+    "id": 70.892,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Heavy Gold Brown",
+    "colour": "rgb(181 130 68)",
+    "id": 72.151,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Dry Rust",
+    "colour": "rgb(93 50 44)",
+    "id": 72.136,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Tinny Tin",
+    "colour": "linear-gradient(141deg, rgb(132 100 93) 0%, rgb(214 203 201) 50%, rgb(132 100 93) 100%);",
+    "id": 72.06,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Silver",
+    "colour": "linear-gradient(141deg, rgb(197 201 202) 0%, rgba(255,255,255,1) 50%, rgb(197 201 202) 100%);",
+    "id": 72.052,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Heavy Brown",
+    "colour": "rgb(109 86 55)",
+    "id": 72.153,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Iraqi Sand",
+    "colour": "rgb(180 147 94)",
+    "id": 70.819,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Brown Ink",
+    "colour": "rgb(154 100 43)",
+    "id": 72.092,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Chocolate Brown",
+    "colour": "rgb(88 67 61)",
+    "id": 70.872,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Flat Earth",
+    "colour": "rgb(105 67 43)",
+    "id": 70.983,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Dark Sand",
+    "colour": "rgb(204 168 103)",
+    "id": 70.847,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Smoke",
+    "colour": "rgb(92 72 69)",
+    "id": 70.939,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Matt Varnish",
+    "colour": "rgba(225, 225, 225, 0)",
+    "id": 70.52,
+    "brand": "Vallejo"
+  },
+  {
+    "name": "Violet Shade",
+    "colour": "rgba(46, 26, 54, 1)",
+    "brand": "Warcolours"
   }
 ]
